@@ -91,7 +91,7 @@ function render(func) {
         </nav>
         <!-- Navbar End -->
         <!-- Blank Start -->
-        <div class="container-fluid pt-4 px-4">
+        <div class="container-fluid pt-4 px-4 mn__vh__85">
           <div
             class="row bg-light rounded align-items-center justify-content-center mx-0"
           >

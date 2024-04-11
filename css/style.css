@@ -4,6 +4,10 @@
   --light: #f3f6f9;
   --dark: #191c24;
 }
+
+.mn__vh__85 { 
+  min-height: 85%;
+}
 .video__center { 
     margin: 0 auto;
 }
