@@ -1,7 +1,7 @@
 const root = document.querySelector("#root");
 
-function render(func) { 
-    return `
+function render(func) {
+  return `
     <div class="container-xxl position-relative bg-white d-flex p-0">
       <!-- Sidebar Start -->
       <div class="sidebar pe-4 pb-3">
@@ -171,7 +171,7 @@ function render(func) {
       </div>
       <!-- Content End -->
     </div>`;
-} 
+}
 
 function renderIndex() {
   return `
@@ -188,7 +188,7 @@ function renderIndex() {
 }
 
 function renderAbout() {
-    return `
+  return `
               <div class="row">
                   <div class="col text-left">
                     <h5>
@@ -197,8 +197,7 @@ function renderAbout() {
                   </div>
               </div>
       `;
-  }
-  
+}
 
 function renderBacisBooks() {
   return `
@@ -246,26 +245,26 @@ function renderBacisBooks() {
                 </div>
 
                 <div class="col-md-4 mb-3">
-                  <div class="card" style="width: 18rem">
+                    <div class="card" style="width: 18rem">
                     <img
-                      class="card-img-top"
-                      src="images/books/с-300-luzan.png"
-                      alt="Card image cap"
+                        class="card-img-top"
+                        src="./images/books/с-300-web-page-army-today.png"
+                        alt="Card image cap"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">
-                        Зенитная ракетная система С‑300В4
-                      </h5>
-                      <p>Зенитные ракетные системы C-300</p>
-                      <p>Автор: Александр Лузан</p>
-                      <p>Текст научной статьи Воздушно-космическая сфера</p>
-                      <p>Год издания: 2017</p>
-                      <a href="./books/с-300-luzan.pdf" class="btn btn-primary"
+                        <h5 class="card-title">
+                        С-300
+                        </h5>
+                        <p>Зенитные ракетные системы C-300</p>
+                        <p>Зенитно-ракетные комплексы С-300, характеристика</p>
+                        <p>© 2024 Армия Cегодня - сайт про военное дело</p>
+                        <a href="https://army-today.ru/tehnika/c-300" class="btn btn-primary"
                         >Читать</a
-                      >
+                        >
                     </div>
-                  </div>
                 </div>
+              </div>
+
               </div>
     `;
 }
@@ -281,12 +280,10 @@ function renderElectronicBooks() {
                       alt="Card image cap"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">С-300</h5>
+                      <h5 class="card-title">Зенитная ракетная система С-300</h5>
                         <p>С-300 «Фаворит»</p>
                         <p>Армия Росии</p>
                         <p>Издательство: Гангут</p>
-                        <p>Copyright © 2009 - 2024
-                          Белов Игорь Викторович</p>
                       <a href="https://studylib.ru/doc/2715386/tema-N-2.-osnovy-postroeniya-zrs." class="btn btn-primary">Читать</a>
                     </div>
                   </div>
@@ -303,7 +300,6 @@ function renderElectronicBooks() {
                         <h5 class="card-title">Основы построения ЗРС</h5>
                           <p>Основы построения ЗРС</p>
                           <p>Тема № 2</p>
-                          <p>Занятие № 1. Общие сведения о зенитных ракетных системах</p>
                         <a href="https://studylib.ru/doc/2715386/tema-N-2.-osnovy-postroeniya-zrs." class="btn btn-primary">Читать</a>
                       </div>
                     </div>
@@ -311,18 +307,19 @@ function renderElectronicBooks() {
 
                   <div class="col-md-4 mb-3">
                     <div class="card" style="width: 18rem">
-                      <img
-                        class="card-img-top"
-                        src="images/books/с-300-luzan.png"
-                        alt="Card image cap"
-                      />
-                      <div class="card-body">
-                        <h5 class="card-title">Зенитная ракетная система С‑300В4</h5>
-                          <p>Зенитные ракетные системы  </p>
-                          <p>Автор: Александр Лузан </p>
-                          <p>Текст научной статьи Воздушно-космическая сфера</p>
-                        <a href="./books/с-300-luzan.pdf" class="btn btn-primary">Читать</a>  
-                      </div>
+                        <img
+                            class="card-img-top"
+                            src="images/electronic/c-300-bel-service.png"
+                            alt="Card image cap"
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">С–300</h5>
+                            <p>Зенитные ракетные системы  </p>
+                            <p>Тактико-технические характеристики</p>
+                            <a 
+                            href="https://www.bvpservice.by/catalog/vooruzhenie-voysk-pvo/zenitnyy-raketnyy-kompleks-s-300" 
+                            class="btn btn-primary">Читать</a>  
+                        </div>
                     </div>
                   </div>
               </div>
@@ -447,8 +444,8 @@ function renderVideo() {
     `;
 }
 
-function renderHead() { 
-    return `
+function renderHead() {
+  return `
     <!-- Icon Font Stylesheet -->
     <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
 
@@ -467,7 +464,7 @@ const pages = {
     content: render(renderIndex),
   },
 
-  about: { 
+  about: {
     title: "Образовательный комплекс",
     head: renderHead(),
     content: render(renderAbout),

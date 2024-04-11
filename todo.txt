@@ -2,7 +2,8 @@ TODO:
     - dowload icons + 
     - write quizz + 
     - write video player : +
-    - add third article -  
+    - add third article +   
 
 
-- Add addtional books
+- Add addtional books + 
+- 
