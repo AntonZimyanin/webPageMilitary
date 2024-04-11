@@ -140,21 +140,11 @@ function render(func) {
         </div>
 
         <!-- Footer Start -->
-        <div id="footer">
           <div class="container">
             <footer
               class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
             >
               <p class="col-md-4 mb-0 text-muted">© 2024 Company, Inc</p>
-
-              <a
-                href="/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
-              >
-                <svg class="bi me-2" width="40" height="32">
-                  <use xlink:href="#bootstrap"></use>
-                </svg>
-              </a>
 
               <ul class="nav col-md-4 justify-content-end">
                 <li class="nav-item">
@@ -170,7 +160,6 @@ function render(func) {
               </ul>
             </footer>
           </div>
-        </div>
         <!-- Footer End -->
       </div>
       <!-- Content End -->
@@ -182,7 +171,7 @@ function renderIndex() {
             <div class="row">
                 <div class="col text-left">
                   <h5>
-                    <span class="text-dark">Автор:</span> старший преподаватель
+                    <span class="text-dark">Автор:</span> преподаватель
                     кафедры ПВО военного факультета БГУ подполковник Романенко
                     Константин Олегович
                   </h5>
@@ -284,7 +273,7 @@ function renderElectronicBooks() {
                       alt="Card image cap"
                     />
                     <div class="card-body">
-                      <h5 class="card-title">Зенитная ракетная система С-300</h5>
+                      <h5 class="card-title">С-300</h5>
                         <p>С-300 «Фаворит»</p>
                         <p>Армия Росии</p>
                         <p>Издательство: Гангут</p>
@@ -448,7 +437,7 @@ function renderVideo() {
     `;
 }
 
-function renderlectionCourse() { 
+function renderlectionCourse() {
   return `
     <h1>lectionCourse</h1>
   `;
@@ -503,7 +492,7 @@ const pages = {
     head: renderHead(),
     content: render(renderVideo),
   },
-  
+
   lectionCourse: {
     title: "Образовательный комплекс",
     head: renderHead(),
