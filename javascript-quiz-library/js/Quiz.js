@@ -61,7 +61,6 @@ Quiz.prototype.create = function() {
     formRoot.innerHTML = "<h1>" + this.name + "</h1>";    
     // document.write("<h1>" + this.name + "</h1>");    
     
-
     submit.type = "submit";
     submit.value = "Ответить";
 

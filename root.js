@@ -53,11 +53,15 @@ function render(func) {
               >
               <div class="dropdown-menu bg-transparent border-0">
                 <a href="#video" onclick='navigateTo("video")' class="dropdown-item">Видеоматериалы</a>
-                <a href="typography.html" class="dropdown-item">Курс лекций</a>
-                <a href="element.html" class="dropdown-item"
-                  >Учебно-программная</a
-                >
               </div>
+
+              <a
+              onclick='navigateTo("lectionCourse")'
+              href="#lection-course"
+              class="nav-item nav-link"
+              ><i class="fa fa-th me-2"></i>Курс лекций</a
+            >
+
             </div>
           </div>
         </nav>
@@ -444,6 +448,12 @@ function renderVideo() {
     `;
 }
 
+function renderlectionCourse() { 
+  return `
+    <h1>lectionCourse</h1>
+  `;
+}
+
 function renderHead() {
   return `
     <!-- Icon Font Stylesheet -->
@@ -492,6 +502,12 @@ const pages = {
     title: "Образовательный комплекс",
     head: renderHead(),
     content: render(renderVideo),
+  },
+  
+  lectionCourse: {
+    title: "Образовательный комплекс",
+    head: renderHead(),
+    content: render(renderlectionCourse),
   },
 };
 

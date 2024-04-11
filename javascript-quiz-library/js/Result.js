@@ -21,11 +21,6 @@ function Result(missing, right, wrong, renderToId) {
   nameLabel.innerHTML = name + ", ваш результат: ";
   tr.appendChild(nameLabel);
 
-  var nameScore = document.createElement("td");
-  nameScore.className = "name-label";
-  nameScore.innerHTML = null;
-  tr.appendChild(nameScore);
-
   // Create and append the other labels and scores
   for (var i = 0; i < args.length; i += 1) {
     var label = document.createElement("td");
@@ -43,11 +38,6 @@ function Result(missing, right, wrong, renderToId) {
   ticketLabel.className = "next-ticket-label";
   ticketLabel.innerHTML = `<a onclick="reloadQuizPage();" href="#">следующий вопрос</a>`;
   tr.appendChild(ticketLabel);
-
-  var ticketScore = document.createElement("td");
-  ticketScore.className = "name-label";
-  ticketScore.innerHTML = null;
-  tr.appendChild(ticketScore);
 
   this.html.appendChild(tr);
 }

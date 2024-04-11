@@ -1,4 +1,3 @@
-
 const root = document.querySelector("#root");
 let globalState = {};
 
@@ -26,7 +25,7 @@ function renderQuiz() {
 
 const pages = {
   quiz: {
-    title: 'Раздел контроля знаний',
+    title: "Раздел контроля знаний",
     head: `
       <link rel="stylesheet" type="text/css" href="css/normalize.css" />
       <link rel="stylesheet" type="text/css" href="css/form.css" />
@@ -40,7 +39,7 @@ const pages = {
     ],
   },
   form: {
-    title: 'Раздел контроля знаний',
+    title: "Раздел контроля знаний",
     head: `<link rel="stylesheet" href="../css/bootstrap.min.css" />`,
     content: `
             <div class="container-fluid h-custom">
@@ -84,7 +83,7 @@ const pages = {
 
 function navigateTo(pageId) {
   const page = pages[pageId];
-  
+
   if (page.head) {
     const head = document.querySelector("head");
     head.innerHTML = page.head;
@@ -112,10 +111,7 @@ function navigateTo(pageId) {
 }
 
 function setContent(content) {
-
-
   root.innerHTML = content;
-  //   root.write(content);
 }
 
 function setName() {
@@ -141,6 +137,6 @@ const reloadQuizPage = () => {
   globalState.quiz.destroy();
 
   navigateTo("quiz");
-}
+};
 
 navigateTo("form");
