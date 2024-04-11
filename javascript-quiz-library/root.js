@@ -15,7 +15,7 @@ function renderQuiz() {
       .concat("", "</p><p class='p__home__page__go'><a ")
       .concat(
         "",
-        `onclick='navigateTo("quiz")' class='a__home__page__go' href='./../index.html'>вернуться на главную</a></p>`
+        `onclick='navigateTo("quiz")' class='a__home__page__go' href='./../root.html'>вернуться на главную</a></p>`
       ),
     questions[inx],
     { shuffle: true },
