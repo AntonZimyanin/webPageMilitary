@@ -56,10 +56,10 @@ function render(func) {
               </div>
 
               <a
-              onclick='navigateTo("lectionCourse")'
+              onclick='navigateTo("studyProgram")'
               href="#lection-course"
               class="nav-item nav-link"
-              ><i class="fa fa-th me-2"></i>Курс лекций</a
+              ><i class="fa fa-th me-2"></i>Учебная программа</a
             >
 
             </div>
@@ -225,7 +225,7 @@ function renderBacisBooks() {
                     <div class="card-body">
                       <h5 class="card-title">C-300</h5>
                       <p>Зенитные ракетные системы C-300</p>
-                      <p>Автор: Храмов, Борис Андреевич, С.А. ЯКОВЛЕВ</p>
+                      <p>Автор: Храмов, Борис Андреевич</p>
                       <p>Издательство: Санкт-Петербург</p>
                       <p>Год издания: 2012</p>
                       <a
@@ -250,7 +250,7 @@ function renderBacisBooks() {
                         </h5>
                         <p>Зенитные ракетные системы C-300</p>
                         <p>Зенитно-ракетные комплексы С-300, характеристика</p>
-                        <p>© 2024 Армия Cегодня - сайт про военное дело</p>
+                        <p>© 2024 Армия Cегодня</p>
                         <a href="https://army-today.ru/tehnika/c-300" class="btn btn-primary"
                         >Читать</a
                         >
@@ -437,10 +437,27 @@ function renderVideo() {
     `;
 }
 
-function renderlectionCourse() {
+function renderStudyProgram() {
   return `
-    <h1>lectionCourse</h1>
-  `;
+  <div class="row m-3 justify-content-center">
+      <div class="col-md-4 mb-3">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="images/studyProgram/study-program.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">ВОЕННАЯ СПЕЦИАЛЬНАЯ ПОДГОТОВКА</h5>
+            <p>Учебная программа учреждения высшего образования</p>
+            <p>Боевое применение подразделений, частей и соединений ПВО
+            </p>
+            <a href="./books/studyProgram/study-program.doc" class="btn btn-primary">Читать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+`;
 }
 
 function renderHead() {
@@ -493,10 +510,10 @@ const pages = {
     content: render(renderVideo),
   },
 
-  lectionCourse: {
+  studyProgram: {
     title: "Образовательный комплекс",
     head: renderHead(),
-    content: render(renderlectionCourse),
+    content: render(renderStudyProgram),
   },
 };
 
