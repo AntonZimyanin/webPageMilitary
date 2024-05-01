@@ -440,23 +440,23 @@ function renderVideo() {
 function renderStudyProgram() {
   return `
   <div class="row m-3 justify-content-center">
-      <div class="col-md-4 mb-3">
-        <div class="card" style="width: 18rem">
-          <img
-            class="card-img-top"
-            src="images/studyProgram/study-program.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">ВОЕННАЯ СПЕЦИАЛЬНАЯ ПОДГОТОВКА</h5>
-            <p>Учебная программа учреждения высшего образования</p>
-            <p>Боевое применение подразделений, частей и соединений ПВО
-            </p>
-            <a href="./books/studyProgram/study-program.doc" class="btn btn-primary">Читать</a>
-          </div>
+    <div class="col-md-4 mb-3">
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="images/studyProgram/study-program.png"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">ВОЕННАЯ СПЕЦИАЛЬНАЯ ПОДГОТОВКА</h5>
+          <p>Учебная программа учреждения высшего образования</p>
+          <p>Боевое применение подразделений, частей и соединений ПВО
+          </p>
+          <a href="./books/studyProgram/study-program.pdf" class="btn btn-primary">Читать</a>
         </div>
       </div>
     </div>
+  </div>
 `;
 }
 
@@ -469,7 +469,13 @@ function renderHead() {
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />    
+    <link href="css/style.css" rel="stylesheet" />   
+    <style>
+    iframe { 
+      width: 100%;
+      
+    }
+  </style> 
     `;
 }
 
@@ -515,7 +521,7 @@ const pages = {
     head: renderHead(),
     content: render(renderStudyProgram),
   },
-};
+};  
 
 function navigateTo(pageId) {
   const page = pages[pageId];
