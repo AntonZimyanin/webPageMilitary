@@ -49,18 +49,15 @@ function render(func) {
 
             <div class="nav-item dropdown">
               <a href="#" class="nav-link" data-bs-toggle="dropdown"
-                ><i class="fa fa-laptop me-2"></i>Видеоматериалы</a
+                ><i class="fa fa-laptop me-2"></i>Вспомогательный раздел</a
               >
               <div class="dropdown-menu bg-transparent border-0">
                 <a href="#video" onclick='navigateTo("video")' class="dropdown-item">Видеоматериалы</a>
+                <a onclick='navigateTo("studyProgram")' href="#lection-course" class="dropdown-item">Учебная программа</a>
+                
               </div>
 
-              <a
-              onclick='navigateTo("studyProgram")'
-              href="#lection-course"
-              class="nav-item nav-link"
-              ><i class="fa fa-th me-2"></i>Учебная программа</a
-            >
+                
 
             </div>
           </div>

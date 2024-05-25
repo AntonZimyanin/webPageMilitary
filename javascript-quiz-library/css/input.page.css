@@ -1,0 +1,5 @@
+.scroll-list { 
+    max-height: 10em;
+    overflow-y: scroll;  /****** NEW *****/
+    overflow-x : hidden; /****** NEW *****/
+}
