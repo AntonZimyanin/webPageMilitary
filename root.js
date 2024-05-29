@@ -31,14 +31,10 @@ function render(func) {
               </div>
             </div>
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link" data-bs-toggle="dropdown"
+              <a href="books/educationBookForTests" class="nav-link" 
                 ><i class="fa fa-laptop me-2"></i>Практическкий раздел</a
               >
-              <div class="dropdown-menu bg-transparent border-0">
-                <a href="button.html" class="dropdown-item">Симуляторы 1</a>
-                <a href="typography.html" class="dropdown-item">Симуляторы 2</a>
-                <a href="element.html" class="dropdown-item">Симуляторы 3</a>
-              </div>
+            
             </div>
 
             <a
@@ -518,7 +514,7 @@ const pages = {
     head: renderHead(),
     content: render(renderStudyProgram),
   },
-};  
+};
 
 function navigateTo(pageId) {
   const page = pages[pageId];

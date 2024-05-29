@@ -24,10 +24,10 @@ function renderQuiz() {
   globalState.quiz = quiz;
 }
 
-function renderQuizNumber() { 
+function renderQuizNumber() {
   var qNum = '';
   for (var i = 0; i < 24; i++) {
-    
+
     qNum += `<li><a class="dropdown-item" href="#">Тест s${i + 1}</a></li>`;
   }
   return qNum;
@@ -36,7 +36,7 @@ function renderQuizNumber() {
 const pages = {
   quiz: {
     title: "Раздел контроля знаний",
-    head:`
+    head: `
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/form.css" />
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
@@ -86,29 +86,24 @@ const pages = {
           </a>
 
           <ul id="dropdown-menu" class="dropdown-menu scroll-list" aria-labelledby="dropdownMenuLink">
-            ${renderQuizNumber()}
-           
-            <li><a class="dropdown-item" href="#">Тест 11 Тест 1Тест 1Тест 1Тест 1Тест 1Тест 1Тест 1Тест 1Тест 1Тест 1</a></li>
+            <li><a class="dropdown-item" href="#">Тест 1 : Апаратура обмена данными </a></li>
+            <li><a class="dropdown-item" href="#">Тест 2 : Запоминающие устройства </a></li>
+            <li><a class="dropdown-item" href="#">Тест 3 : Общиие сведения о ЦВК. Коммутатор и УУКФКМ </a></li>
+            <li><a class="dropdown-item" href="#">Тест 4 : Процессор </a></li>
+            <li><a class="dropdown-item" href="#">Тест 4 : Устройство ЦВУ </a></li>
+
           </ul>
         </div>
 
         <br>
         <p>Номер теста по умолчанию: ${getQuizNumber() + 1} </p>
-
-
-
-
-        
       </div>
-
-      
     </div>
-      
     </div>
   </div>
         `,
   },
-  
+
 };
 
 function navigateTo(pageId) {
@@ -164,7 +159,7 @@ function auth() {
 }
 
 
-function setQuizNumber() { 
+function setQuizNumber() {
   var getParentAnchor = function (element) {
     while (element !== null) {
       if (element.tagName && element.tagName.toUpperCase() === "A") {
@@ -174,10 +169,10 @@ function setQuizNumber() {
     }
     return null;
   };
-  
-  document.querySelector("#dropdown-menu").addEventListener('click', function(e) {
+
+  document.querySelector("#dropdown-menu").addEventListener('click', function (e) {
     var anchor = getParentAnchor(e.target);
-    if(anchor !== null) {
+    if (anchor !== null) {
 
       var quizNumberLabel = anchor.textContent;
       var quizNumber = quizNumberLabel.split(" ")[1];
@@ -189,9 +184,8 @@ function setQuizNumber() {
   }, false);
 
 
-  
-}
 
+}
 
 function getQuizNumber() {
   var quizNumber = globalState.quizNumber;
