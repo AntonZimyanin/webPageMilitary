@@ -1,4 +1,4 @@
-const root = document.querySelector("#root");
+var root = document.querySelector("#root");
 
 function render(func) {
   return `
@@ -472,7 +472,7 @@ function renderHead() {
     `;
 }
 
-const pages = {
+var pages = {
   index: {
     title: "Образовательный комплекс",
     head: renderHead(),
@@ -517,10 +517,10 @@ const pages = {
 };
 
 function navigateTo(pageId) {
-  const page = pages[pageId];
+  var page = pages[pageId];
 
   if (page.head) {
-    const head = document.querySelector("head");
+    var head = document.querySelector("head");
     head.innerHTML = page.head;
   }
 
@@ -532,7 +532,7 @@ function navigateTo(pageId) {
 
   if (page.scripts) {
     page.scripts.forEach((script) => {
-      const scriptElement = document.createElement("script");
+      var scriptElement = document.createElement("script");
 
       if (script.path) {
         scriptElement.src = script.path;

@@ -1,8 +1,8 @@
-const root = document.querySelector("#root");
-let globalState = {};
+var root = document.querySelector("#root");
+var globalState = {};
 
 function renderQuiz() {
-  const random = (min, max) => {
+  var random = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
   var inx = random(0, 4);
@@ -33,7 +33,7 @@ function renderQuizNumber() {
   return qNum;
 }
 
-const pages = {
+var pages = {
   quiz: {
     title: "Раздел контроля знаний",
     head: `
@@ -107,10 +107,10 @@ const pages = {
 };
 
 function navigateTo(pageId) {
-  const page = pages[pageId];
+  var page = pages[pageId];
 
   if (page.head) {
-    const head = document.querySelector("head");
+    var head = document.querySelector("head");
     head.innerHTML = page.head;
   }
 
@@ -122,7 +122,7 @@ function navigateTo(pageId) {
 
   if (page.scripts) {
     page.scripts.forEach((script) => {
-      const scriptElement = document.createElement("script");
+      var scriptElement = document.createElement("script");
 
       if (script.path) {
         scriptElement.src = script.path;
@@ -140,7 +140,7 @@ function setContent(content) {
 }
 
 function setName() {
-  const name = document.getElementById("nameOfStudent").value;
+  var name = document.getElementById("nameOfStudent").value;
 
   if (!name) {
     return false;
